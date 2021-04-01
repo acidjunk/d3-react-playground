@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Partially copied stuff from: https://medium.com/nightingale/d3-and-react-a-design-pattern-for-responsive-charts-f77337d37ab9
 
+Deeper stuff found in: https://wattenberger.com/blog/react-and-d3 (research needed)
+
 ## Available Scripts
 
 In the project directory, you can run:
