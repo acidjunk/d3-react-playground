@@ -1,17 +1,42 @@
 import React from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { withContext } from "../contexts/ReactDims";
-import {useRef} from "react";
+import ThePattern from "../ThePattern";
 
 const styles = {
+  display: "grid",
   height: "100%",
-  backgroundColor: "red",
+  // backgroundColor: "#000",
 };
-const ReactNode = ({ dims }) => {
-  const domNode = useRef(null);
 
-  return (<div style={styles} ref={domNode}>
-    {dims.width} x {dims.height}
-  </div>);
+const ReactNode = ({ dims, data }) => {
+  const domNode = useRef(null);
+  const [canvas, createCanvas] = useState(null);
+  const [vizInitialized, setVizInitialized] = useState(false);
+
+  useEffect(() => {
+    createCanvas(() => new ThePattern(domNode.current));
+  }, []);
+
+  useEffect(() => {
+    vizInitialized && canvas.updateDims(dims);
+  }, [dims]);
+
+  useEffect(()=>{
+    vizInitialized && canvas.updateData(data);
+  }, [data]);
+
+  useEffect(() => {
+    if (data.length > 1 && dims.width && vizInitialized === false) {
+      canvas.init(data, dims);
+      setVizInitialized(() => true);
+    }
+  }, [data, dims]);
+
+  return <div ref={domNode} style={styles} />;
+  // return (<div style={styles} ref={domNode}>
+  //   {dims.width} x {dims.height}
+  // </div>);
 };
 export default withContext(ReactNode);
