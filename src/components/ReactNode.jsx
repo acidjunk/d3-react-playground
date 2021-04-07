@@ -23,7 +23,7 @@ const ReactNode = ({ dims, data }) => {
     vizInitialized && canvas.updateDims(dims);
   }, [dims]);
 
-  useEffect(()=>{
+  useEffect(() => {
     vizInitialized && canvas.updateData(data);
   }, [data]);
 
