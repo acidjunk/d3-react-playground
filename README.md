@@ -6,7 +6,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Partially copied stuff from: https://medium.com/nightingale/d3-and-react-a-design-pattern-for-responsive-charts-f77337d37ab9
 
+## RESEARCH / TODO:
+
+"alphasights-react-d3-tree": "^2.1.1",
+
 Deeper stuff found in: https://wattenberger.com/blog/react-and-d3 (research needed)
+
+Some boilerplate for react: https://stackoverflow.com/questions/49963422/not-getting-tree-with-expected-link-style-in-reactjs-using-d3
+
+----------
 
 ## Available Scripts
 

@@ -28,7 +28,9 @@ const ReactNode = ({ dims, data }) => {
   }, [data]);
 
   useEffect(() => {
-    if (data.length > 1 && dims.width && vizInitialized === false) {
+    if (data.length && dims.width && vizInitialized === false) {
+      // Array stuff for old example
+      // if (data.length && dims.width && vizInitialized === false) {
       canvas.init(data, dims);
       setVizInitialized(() => true);
     }

@@ -2,6 +2,8 @@ import { select } from "d3-selection";
 
 import Circles from "./Circles";
 import { Axes, Dimensions, Scales } from "./utils";
+// import { tree } from "d3-tree";
+
 class ChartInterface {
   constructor(domNodeCurrent) {
     this.svg = select(domNodeCurrent).append("svg");
@@ -9,6 +11,7 @@ class ChartInterface {
   }
   init = (data, dims) => {
     this.data = data;
+    console.log(data);
     this.dims = new Dimensions(dims);
     this.chart = this.svg.append("g");
 
@@ -23,7 +26,7 @@ class ChartInterface {
       "transform",
       `translate(${this.dims.margin.left}, ${this.dims.margin.top})`
     );
-    this.scales = new Scales(this.data, this.dims); //
+    this.scales = new Scales(this.data, this.dims);
     this.axes = new Axes(this.chart, this.scales, this.dims);
     this.circles = new Circles(this.chart, this.data, this.scales);
 
