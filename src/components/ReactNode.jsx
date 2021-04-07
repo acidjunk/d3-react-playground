@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 
 import { withContext } from "../contexts/ReactDims";
-import ThePattern from "../ThePattern";
+import ChartInterface from "../d3Land/ChartInterface";
 
 const styles = {
   display: "grid",
@@ -16,7 +16,7 @@ const ReactNode = ({ dims, data }) => {
   const [vizInitialized, setVizInitialized] = useState(false);
 
   useEffect(() => {
-    createCanvas(() => new ThePattern(domNode.current));
+    createCanvas(() => new ChartInterface(domNode.current));
   }, []);
 
   useEffect(() => {
