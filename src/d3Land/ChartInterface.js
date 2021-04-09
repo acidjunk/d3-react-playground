@@ -2,6 +2,7 @@ import { select } from "d3-selection";
 
 import Circles from "./Circles";
 import { Axes, Dimensions, Scales } from "./utils";
+
 // import { tree } from "d3-tree";
 
 class ChartInterface {

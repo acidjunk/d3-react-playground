@@ -33,7 +33,7 @@ const myTreeData = [
           {
             name: "Level 3: D",
           },
-        ]
+        ],
       },
       {
         name: "Level 2: C",
@@ -71,7 +71,7 @@ const myTreeData = [
           {
             name: "Level 3: H",
           },
-        ]
+        ],
       },
       {
         name: "Level 2: K",
