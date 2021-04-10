@@ -1,5 +1,5 @@
 export const dataRoleTree = {
-  name: "roles", // ROOT is needed
+  name: "R", // ROOT is needed
   children: [
     {
       // ROLE
@@ -10,10 +10,304 @@ export const dataRoleTree = {
       children: [
         {
           // SCOPE
-name: "super:admins",
-      attributes: {
-        type: "Scope",
-      },
+          name: "super:admins",
+          attributes: {
+            type: "Scope",
+          },
+          children: [
+            {
+              // RESOURCE
+              name: "/api/**",
+              children: [
+                // CLIENT
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+                {
+                  name: "crm",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "crm",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "crm",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "crm",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+                {
+                  name: "orchestrator",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "orchestrator",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "orchestrator",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "orchestrator",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+              ],
+            },
+            {
+              name: "/ims/*",
+              children: [
+                // CLIENT
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+              ],
+            },
+            {
+              name: "/crm/*",
+              children: [
+                {
+                  name: "client1",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "client1",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "client1",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "client1",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          // SCOPE
+          name: "normal:people",
+          attributes: {
+            type: "Scope",
+          },
+          children: [
+            {
+              // RESOURCE
+              name: "/api/**",
+              children: [
+                // CLIENT
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+                {
+                  name: "crm",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "crm",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "crm",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "crm",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+                {
+                  name: "orchestrator",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "orchestrator",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "orchestrator",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "orchestrator",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+              ],
+            },
+            {
+              name: "/ims/*",
+              children: [
+                // CLIENT
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+              ],
+            },
+            {
+              name: "/crm/*",
+              children: [
+                {
+                  name: "client1",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "client1",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "client1",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "client1",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          // SCOPE
+          name: "robots:and:ai",
+          attributes: {
+            type: "Scope",
+          },
           children: [
             {
               // RESOURCE
@@ -166,10 +460,304 @@ name: "super:admins",
       children: [
         {
           // SCOPE
-name: "super:admins",
-      attributes: {
-        type: "Scope",
-      },
+          name: "super:admins",
+          attributes: {
+            type: "Scope",
+          },
+          children: [
+            {
+              // RESOURCE
+              name: "/api/**",
+              children: [
+                // CLIENT
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+                {
+                  name: "crm",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "crm",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "crm",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "crm",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+                {
+                  name: "orchestrator",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "orchestrator",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "orchestrator",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "orchestrator",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+              ],
+            },
+            {
+              name: "/ims/*",
+              children: [
+                // CLIENT
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+              ],
+            },
+            {
+              name: "/crm/*",
+              children: [
+                {
+                  name: "client1",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "client1",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "client1",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "client1",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          // SCOPE
+          name: "customers:extern",
+          attributes: {
+            type: "Scope",
+          },
+          children: [
+            {
+              // RESOURCE
+              name: "/api/**",
+              children: [
+                // CLIENT
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+                {
+                  name: "crm",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "crm",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "crm",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "crm",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+                {
+                  name: "orchestrator",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "orchestrator",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "orchestrator",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "orchestrator",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+              ],
+            },
+            {
+              name: "/ims/*",
+              children: [
+                // CLIENT
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "ims",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+              ],
+            },
+            {
+              name: "/crm/*",
+              children: [
+                {
+                  name: "client1",
+                  attributes: {
+                    action: "Create",
+                  },
+                },
+                {
+                  name: "client1",
+                  attributes: {
+                    action: "Read",
+                  },
+                },
+                {
+                  name: "client1",
+                  attributes: {
+                    action: "Update",
+                  },
+                },
+                {
+                  name: "client1",
+                  attributes: {
+                    action: "Delete",
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          // SCOPE
+          name: "customers:intern",
+          attributes: {
+            type: "Scope",
+          },
           children: [
             {
               // RESOURCE
@@ -322,10 +910,10 @@ name: "super:admins",
       children: [
         {
           // SCOPE
-name: "super:admins",
-      attributes: {
-        type: "Scope",
-      },
+          name: "super:admins",
+          attributes: {
+            type: "Scope",
+          },
           children: [
             {
               // RESOURCE
@@ -478,10 +1066,10 @@ name: "super:admins",
       children: [
         {
           // SCOPE
-name: "super:admins",
-      attributes: {
-        type: "Scope",
-      },
+          name: "super:admins",
+          attributes: {
+            type: "Scope",
+          },
           children: [
             {
               // RESOURCE
@@ -634,10 +1222,10 @@ name: "super:admins",
       children: [
         {
           // SCOPE
-name: "super:admins",
-      attributes: {
-        type: "Scope",
-      },
+          name: "super:admins",
+          attributes: {
+            type: "Scope",
+          },
           children: [
             {
               // RESOURCE

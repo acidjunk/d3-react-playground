@@ -1,5 +1,8 @@
+import "@elastic/eui/dist/eui_theme_light.css";
+
 import "./App.css";
 
+import { EuiButton } from "@elastic/eui";
 import { useEffect, useState } from "react";
 
 import InteractiveTree from "./components/InteractiveTree";
@@ -30,7 +33,7 @@ function App() {
         {/*</TreeDimensions>*/}
         <h1>Dynamic SVG loader</h1>
         <Provider>
-          <button onClick={generateData}>update data</button>
+          <EuiButton onClick={generateData}>update data</EuiButton>
           <ReactNode data={data} />
         </Provider>
         <h1>Calculate in D3, Render in React</h1>
